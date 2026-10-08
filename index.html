@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한백건축배 연말파티 접수</title>
+<meta name="description" content="한백건축배 연말파티 1박 2일 눈싸움 힐링 캠프 참가 접수">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="한백건축배 연말파티 · VVIP 초대장">
+<meta property="og:description" content="1박 2일 눈싸움 힐링 캠프, 참가 접수 중!">
+<meta property="og:image" content="image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1d2b6e; --navy2:#2a3b8f; --sky:#dff0ff; --snow:#ffffff;
+  --orange:#ff8a1f; --orange2:#ffb347; --red:#e8433a; --wood:#8a5a2b; --wood2:#b9793a;
+  --ink:#24284a; --mute:#6b7196; --line:#d6e4f5; --ok:#1f9d63; --card:#ffffffee;
+  --shadow:0 10px 30px rgba(20,35,100,.18);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Gowun Dodum','Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:var(--ink);
+  background:linear-gradient(180deg,#14205a 0%,#2a3b8f 38%,#8fb8ee 70%,#eaf4ff 100%);background-attachment:fixed;min-height:100vh;overflow-x:hidden}
+h1,h2,h3,.jua{font-family:'Jua','Gowun Dodum',sans-serif;font-weight:400}
+button,input,textarea,select{font:inherit;color:inherit}
+.snow{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.snow i{position:absolute;top:-10vh;color:#fff;opacity:.85;animation:fall linear infinite;user-select:none}
+@keyframes fall{to{transform:translateY(112vh) translateX(var(--dx,20px)) rotate(360deg)}}
+.wrap{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:18px 16px 60px}
+
+/* hero */
+.hero{text-align:center;padding:14px 0 6px}
+.hero .snowman{font-size:44px;display:inline-block;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px) rotate(-4deg)}}
+.title{margin:2px 0 0;font-size:40px;line-height:1.12;letter-spacing:-1px}
+.title .t1{display:block;color:#fff;text-shadow:0 3px 0 #5b86d6,0 6px 14px rgba(0,0,0,.25)}
+.title .t2{display:block;color:var(--orange2);text-shadow:0 3px 0 #c4590a,0 6px 14px rgba(0,0,0,.3);font-size:46px}
+.sign{display:inline-block;margin-top:12px;padding:8px 18px;background:linear-gradient(180deg,var(--wood2),var(--wood));color:#fff;border-radius:12px;
+  border:3px solid #6b4220;box-shadow:0 5px 0 #4d2f14,0 10px 18px rgba(0,0,0,.25);font-family:'Jua';font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.chip{background:#ffffffdd;border-radius:999px;padding:6px 12px;font-size:14px;box-shadow:0 3px 8px rgba(20,35,100,.15)}
+
+/* counter */
+.counter{margin:18px auto 0;background:linear-gradient(180deg,#fff,#eaf4ff);border-radius:24px;padding:14px 18px;text-align:center;
+  box-shadow:var(--shadow);border:3px solid #fff;position:relative}
+.counter::before{content:"";position:absolute;left:14px;right:14px;top:-9px;height:14px;background:#fff;border-radius:14px 14px 4px 4px}
+.counter .lbl{font-size:14px;color:var(--mute)}
+.counter .num{font-family:'Jua';font-size:46px;line-height:1.1;color:var(--orange);text-shadow:0 2px 0 #ffe0b8}
+.counter .num small{font-size:20px;color:var(--navy);margin-left:4px}
+.badge{display:inline-block;margin-top:4px;padding:3px 10px;border-radius:999px;font-size:12.5px;background:#e9f9f0;color:var(--ok)}
+.badge.closed{background:#ffe9e7;color:var(--red)}
+
+/* cards */
+.card{background:var(--card);border-radius:24px;padding:18px;margin-top:16px;box-shadow:var(--shadow);border:3px solid #fff;backdrop-filter:blur(4px)}
+.invite{font-size:14.5px;line-height:1.55}
+.invite b{color:var(--navy)}
+.invite .row{display:flex;gap:8px;align-items:flex-start;margin:4px 0}
+.btn-poster{margin-top:10px;width:100%;border:2px dashed var(--navy2);background:#f1f7ff;border-radius:14px;padding:10px;cursor:pointer;color:var(--navy);font-family:'Jua';font-size:16px}
+.btn-poster:hover{background:#e4f0ff}
+
+.tabs{display:flex;gap:6px;background:#e6f0fb;border-radius:16px;padding:5px;margin-bottom:14px}
+.tab{flex:1;border:0;background:transparent;border-radius:12px;padding:10px 6px;cursor:pointer;font-family:'Jua';font-size:16px;color:var(--mute)}
+.tab[aria-selected=true]{background:#fff;color:var(--orange);box-shadow:0 3px 8px rgba(20,35,100,.15)}
+
+label{display:block;font-family:'Jua';font-size:16px;margin:14px 0 6px;color:var(--navy)}
+label .opt{font-family:'Gowun Dodum';font-size:12.5px;color:var(--mute);margin-left:4px}
+input[type=text],input[type=password],textarea{width:100%;border:2.5px solid var(--line);background:#fff;border-radius:16px;padding:12px 14px;font-size:16px;outline:none;transition:.15s}
+input:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 4px #ffe3c4}
+textarea{resize:vertical;min-height:84px}
+.hint{font-size:12.5px;color:var(--mute);margin-top:5px}
+.cnt{float:right;font-size:12px;color:var(--mute);font-family:'Gowun Dodum'}
+
+.swatches{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.sw{width:40px;height:40px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.25);cursor:pointer;position:relative;transition:.15s;padding:0}
+.sw:hover{transform:scale(1.1)}
+.sw[aria-pressed=true]{outline:3px solid var(--orange);transform:scale(1.12)}
+.sw[aria-pressed=true]::after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-weight:bold;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.sw.pick{background:conic-gradient(red,orange,yellow,lime,cyan,blue,magenta,red);overflow:hidden}
+.sw.pick input{position:absolute;inset:-6px;width:60px;height:60px;opacity:0;cursor:pointer}
+.picked{margin-top:8px;font-size:14px;display:flex;align-items:center;gap:8px;min-height:24px}
+.dot{display:inline-block;width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #0003;vertical-align:-3px}
+
+.btn{display:block;width:100%;border:0;border-radius:18px;padding:15px;font-family:'Jua';font-size:20px;cursor:pointer;color:#fff;
+  background:linear-gradient(180deg,#ffa23a,var(--orange));box-shadow:0 5px 0 #c4650b,0 10px 18px rgba(255,138,31,.35);transition:.1s;margin-top:18px}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #c4650b}
+.btn[disabled]{filter:grayscale(.7);opacity:.7;cursor:not-allowed}
+.btn.sec{background:linear-gradient(180deg,#5d78d6,var(--navy2));box-shadow:0 5px 0 #18266b}
+.btn.ghost{background:#fff;color:var(--red);box-shadow:0 0 0 2px #f3c3bf;font-size:16px;padding:11px;margin-top:10px}
+.btn.small{display:inline-block;width:auto;font-size:14px;padding:8px 14px;margin:0;border-radius:12px;box-shadow:0 3px 0 #c4650b}
+.btn.small.sec{box-shadow:0 3px 0 #18266b}
+.msg{margin-top:12px;padding:11px 14px;border-radius:14px;font-size:14.5px;display:none;line-height:1.5}
+.msg.err{display:block;background:#ffecea;color:#b3281f}
+.msg.ok{display:block;background:#e8f8ef;color:#13774a}
+
+.done{text-align:center}
+.done .big{font-size:60px}
+.done h2{margin:6px 0;font-size:26px}
+.keybox{background:#fff7e8;border:2px dashed var(--orange);border-radius:16px;padding:12px;margin:12px 0;font-size:14.5px;line-height:1.6}
+.keybox b{color:var(--red)}
+
+footer{position:relative;z-index:1;text-align:center;color:#fff;font-size:13px;padding:0 16px 34px;opacity:.9}
+footer button{background:none;border:0;color:#fff;text-decoration:underline;cursor:pointer;opacity:.7;font-size:12.5px;margin-top:8px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:#0009;z-index:50;display:none;align-items:center;justify-content:center;padding:14px;overflow:auto}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:92vh;border-radius:16px;box-shadow:0 10px 40px #000a}
+
+/* admin */
+.wrap.admin{max-width:1060px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#fff}
+.topbar h2{margin:0;font-size:24px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:14px}
+.stat{background:#fff;border-radius:18px;padding:12px;text-align:center;box-shadow:var(--shadow)}
+.stat .n{font-family:'Jua';font-size:34px;color:var(--orange);line-height:1.1}
+.stat .l{font-size:13px;color:var(--mute)}
+.stat.ok .n{color:var(--ok)} .stat.cx .n{color:var(--mute)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.tools input{flex:1;min-width:150px;padding:9px 12px;border-radius:12px}
+.tbl-wrap{overflow-x:auto;border-radius:16px;border:2px solid var(--line);background:#fff}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+th{background:#eaf2ff;color:var(--navy);font-family:'Jua';font-weight:400;text-align:left;padding:10px;white-space:nowrap;position:sticky;top:0}
+td{padding:9px 10px;border-top:1px solid #eef3fb;vertical-align:top}
+td.txt{max-width:260px;white-space:pre-wrap;word-break:break-word}
+tr.cx td{opacity:.5}
+select.st{border:2px solid var(--line);border-radius:10px;padding:5px 6px;background:#fff}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12.5px}
+.pill.접수{background:#fff1dc;color:#b86400}.pill.확정{background:#e3f7ec;color:#13774a}.pill.취소{background:#eee;color:#777}
+.x{border:0;background:none;color:var(--red);cursor:pointer;font-size:16px}
+.bars{margin-top:6px}
+.bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:14px}
+.bar .b{height:16px;border-radius:8px;min-width:6px;border:1px solid #0002}
+.final-list{columns:2;column-gap:20px;margin:0;padding:0;list-style:none}
+.final-list li{break-inside:avoid;padding:6px 0;border-bottom:1px dashed var(--line)}
+@media(max-width:560px){.final-list{columns:1}.title{font-size:34px}.title .t2{font-size:40px}}
+.hide{display:none!important}
+.demo{position:fixed;left:0;right:0;bottom:0;background:#ffefc9;color:#7a4b00;font-size:12.5px;text-align:center;padding:6px;z-index:40}
+.mt{margin-top:14px}
+body{padding-bottom:34px}
+@media (prefers-reduced-motion:reduce){.snow i,.snowman{animation:none}}
+</style>
+</head>
+<body>
+<div class="snow" id="snow" aria-hidden="true"></div>
+
+<!-- ============ 일반 접수 화면 ============ -->
+<div class="wrap" id="pubView">
+  <header class="hero">
+    <span class="snowman">⛄</span>
+    <h1 class="title"><span class="t1">한백건축배</span><span class="t2">연말파티</span></h1>
+    <div class="sign">❄ 1박 2일 눈싸움 힐링 캠프 ❄</div>
+    <div class="chips">
+      <span class="chip">📅 2026년 연말</span><span class="chip">📍 강원도</span>
+      <span class="chip">⛷ 눈싸움</span><span class="chip">🛷 썰매</span><span class="chip">🔥 불멍</span>
+    </div>
+  </header>
+
+  <section class="counter" aria-live="polite">
+    <div class="lbl">지금까지 함께하기로 한 사람</div>
+    <div class="num"><span id="count">–</span><small>명</small></div>
+    <span class="badge" id="openBadge">접수 중</span>
+  </section>
+
+  <section class="card invite">
+    <div class="row">💌 <div><b>VVIP 초대장</b> — 눈싸움 · 썰매 · 불멍</div></div>
+    <div class="row">👥 <div><b>초대 대상</b> 30대 이하 한백 임직원 · 직속 가족 · 1년 이내 퇴사자</div></div>
+    <div class="row">🎁 <div>간식 · 상품 · 회식비 <b>찬조는 언제나 대환영!</b> (불참은 자유, 찬조는 센스)</div></div>
+    <button class="btn-poster" id="posterBtn" type="button">🖼 초대장 포스터 보기</button>
+  </section>
+
+  <section class="card">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tabNew" aria-selected="true">✏️ 접수하기</button>
+      <button class="tab" role="tab" id="tabEdit" aria-selected="false">🔑 내 접수 수정</button>
+    </div>
+
+    <!-- 신규 접수 / 수정 폼 -->
+    <form id="form" autocomplete="off" novalidate>
+      <div id="editBanner" class="msg ok hide" style="display:none"></div>
+
+      <label for="name">이름 <span class="opt">필수</span></label>
+      <input type="text" id="name" maxlength="20" placeholder="예) 홍길동" required>
+
+      <label>좋아하는 색상 <span class="opt">필수 · 하나 콕!</span></label>
+      <div class="swatches" id="swatches"></div>
+      <div class="picked" id="picked"></div>
+
+      <label for="resolve">각오 <span class="cnt" id="cResolve">0/200</span></label>
+      <textarea id="resolve" maxlength="200" placeholder="예) 눈싸움 1등은 내가 한다 ⛄" required></textarea>
+
+      <label for="wish">바라는 점 <span class="opt">선택</span><span class="cnt" id="cWish">0/300</span></label>
+      <textarea id="wish" maxlength="300" placeholder="예) 따뜻한 숙소, 맛있는 간식, 늦잠 보장!"></textarea>
+
+      <div id="pinBox">
+        <label for="pin">수정용 비밀번호 <span class="opt">4자 이상 · 나중에 내 접수를 고칠 때 써요</span></label>
+        <input type="password" id="pin" maxlength="20" placeholder="기억하기 쉬운 걸로!" autocomplete="new-password">
+        <div class="hint">⚠ 잊어버리면 찾을 수 없어요. 관리자는 이 비밀번호를 볼 수 없어요.</div>
+      </div>
+
+      <div class="msg" id="msg" role="alert"></div>
+      <button class="btn" id="submitBtn" type="submit">🎉 접수하기</button>
+      <button class="btn ghost hide" id="cancelBtn" type="button">접수 취소하기 (불참)</button>
+    </form>
+
+    <!-- 내 접수 찾기 -->
+    <form id="findForm" class="hide" autocomplete="off" novalidate>
+      <p class="hint" style="margin:0 0 4px">접수할 때 적은 <b>이름</b>과 <b>수정용 비밀번호</b>를 입력하면 내 접수를 불러와요.</p>
+      <label for="fName">이름</label>
+      <input type="text" id="fName" maxlength="20">
+      <label for="fPin">수정용 비밀번호</label>
+      <input type="password" id="fPin" maxlength="20" autocomplete="off">
+      <div class="msg" id="fMsg" role="alert"></div>
+      <button class="btn sec" id="findBtn" type="submit">🔍 내 접수 불러오기</button>
+    </form>
+
+    <!-- 완료 -->
+    <div id="done" class="done hide">
+      <div class="big" id="doneEmoji">🎉</div>
+      <h2 id="doneTitle">접수 완료!</h2>
+      <p id="doneText" style="margin:4px 0"></p>
+      <div class="keybox" id="keyBox"></div>
+      <button class="btn sec" id="againBtn" type="button">확인</button>
+    </div>
+  </section>
+</div>
+
+<footer id="pubFooter">
+  <div>한백건축사사무소 · 연말파티 준비위원회 ❄</div>
+  <div>접수 현황에는 인원 수만 표시되고, 개인 정보는 공개되지 않아요.</div>
+  <button id="adminLink" type="button">관리자</button>
+</footer>
+
+<!-- ============ 관리자 화면 ============ -->
+<div class="wrap admin hide" id="adminView">
+  <!-- 로그인 -->
+  <div id="loginBox" style="max-width:420px;margin:60px auto 0">
+    <div class="card">
+      <h2 style="margin:0 0 4px;font-size:26px">🔐 관리자 로그인</h2>
+      <p class="hint" style="margin:0">접수 기록 전체는 관리자만 볼 수 있어요.</p>
+      <form id="loginForm" autocomplete="off">
+        <label for="apw">관리자 비밀번호</label>
+        <input type="password" id="apw" autocomplete="current-password">
+        <div class="msg" id="lMsg" role="alert"></div>
+        <button class="btn sec" type="submit" id="loginBtn">로그인</button>
+        <button class="btn ghost" type="button" id="backBtn" style="color:var(--navy);box-shadow:0 0 0 2px var(--line)">← 접수 화면으로</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 대시보드 -->
+  <div id="dash" class="hide">
+    <div class="topbar">
+      <h2>⛄ 연말파티 접수 관리</h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn small sec" id="reloadBtn">🔄 새로고침</button>
+        <button class="btn small sec" id="openBtn">접수 마감하기</button>
+        <button class="btn small" id="logoutBtn" style="background:#fff;color:var(--navy);box-shadow:0 3px 0 #bcd">로그아웃</button>
+      </div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="card">
+      <div class="tabs">
+        <button class="tab" id="aTabAll" aria-selected="true">📋 전체 기록</button>
+        <button class="tab" id="aTabFinal" aria-selected="false">✅ 최종 신청현황</button>
+      </div>
+
+      <div id="allPane">
+        <div class="tools">
+          <input type="text" id="q" placeholder="이름·각오·바라는점 검색">
+          <button class="btn small" id="csvBtn">⬇ 엑셀(CSV) 저장</button>
+        </div>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>#</th><th>이름</th><th>색상</th><th>각오</th><th>바라는 점</th><th>접수</th><th>수정</th><th>상태</th><th></th></tr></thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+        <p class="hint">상태를 <b>확정</b>으로 바꾸면 "최종 신청현황"에 올라가요. 접수자가 직접 취소하면 <b>취소</b>로 표시되고 접수 인원에서 빠져요.</p>
+      </div>
+
+      <div id="finalPane" class="hide">
+        <h3 style="margin:0 0 6px;font-size:20px">확정 명단 <span id="finalN"></span></h3>
+        <ul class="final-list" id="finalList"></ul>
+        <h3 style="margin:18px 0 4px;font-size:20px">🎨 좋아하는 색상 분포 <span class="hint">(취소 제외)</span></h3>
+        <div class="bars" id="bars"></div>
+        <div class="tools mt"><button class="btn small" id="csvFinalBtn">⬇ 확정 명단 CSV 저장</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lb" id="lb"><img data-src="image.png" alt="한백건축배 연말파티 초대장 포스터"></div>
+<div class="demo hide" id="demoBar">⚠ 미리보기(데모) 모드예요 — 데이터가 이 브라우저에만 저장돼요. API_URL을 설정하면 실제로 동작해요.</div>
+
+<script>
+/* ════════ 설정 ════════
+   Apps Script 웹 앱 배포 후 나오는 URL(.../exec)을 아래에 붙여넣으세요.
+   비워두면 미리보기(데모) 모드로 동작합니다. */
+const API_URL = '';
+
+/* ════════ 유틸 ════════ */
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fix = s => String(s || '').replace(/^'/, ''); // 서버가 수식방지로 붙인 ' 제거
+const store = { get(k){try{return sessionStorage.getItem(k)}catch(e){return null}}, set(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}, del(k){try{sessionStorage.removeItem(k)}catch(e){}} };
+
+/* 눈 내리기 */
+(function(){
+  const box = $('#snow'), ch = ['❄','❅','❆','•'];
+  for(let i=0;i<28;i++){
+    const s = document.createElement('i');
+    s.textContent = ch[i%ch.length];
+    s.style.left = Math.random()*100+'vw';
+    s.style.fontSize = (8+Math.random()*16)+'px';
+    s.style.animationDuration = (7+Math.random()*9)+'s';
+    s.style.animationDelay = (-Math.random()*14)+'s';
+    s.style.setProperty('--dx', (Math.random()*80-40)+'px');
+    box.appendChild(s);
+  }
+})();
+
+/* ════════ API (실서버 / 데모) ════════ */
+async function api(action, payload){
+  const body = Object.assign({action}, payload||{});
+  if(!API_URL) return demoApi(body);
+  try{
+    const res = await fetch(API_URL, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(body), redirect:'follow'});
+    return await res.json();
+  }catch(e){
+    return {ok:false, error:'서버에 연결하지 못했어요. 잠시 후 다시 시도해주세요.'};
+  }
+}
+
+/* 데모 백엔드 — localStorage 사용(미리보기 전용) */
+function demoApi(b){
+  const K='hbparty_demo', load=()=>{try{return JSON.parse(localStorage.getItem(K)||'{"rows":[],"open":true}')}catch(e){return {rows:[],open:true}}}, save=d=>{try{localStorage.setItem(K,JSON.stringify(d))}catch(e){}};
+  const d=load(), nm=s=>String(s||'').replace(/\s+/g,'').toLowerCase(), now=()=>new Date().toISOString().slice(0,19).replace('T',' ');
+  const cnt=()=>d.rows.filter(r=>r.status!=='취소').length;
+  const pub=r=>({id:r.id,name:r.name,colorName:r.colorName,colorHex:r.colorHex,resolve:r.resolve,wish:r.wish,status:r.status});
+  const adm=()=>b.token==='demo-token';
+  return new Promise(res=>setTimeout(()=>{
+    const A=b.action;
+    if(A==='stats') return res({ok:true,count:cnt(),open:d.open});
+    if(A==='submit'){
+      if(!d.open) return res({ok:false,error:'접수가 마감되었어요.'});
+      if(!b.name||!b.colorName||!b.resolve) return res({ok:false,error:'필수 항목을 확인해주세요.'});
+      if(String(b.pin||'').length<4) return res({ok:false,error:'수정 비밀번호는 4자 이상으로 정해주세요.'});
+      if(d.rows.some(r=>nm(r.name)===nm(b.name)&&r.pin===b.pin&&r.status!=='취소')) return res({ok:false,error:'같은 이름·비밀번호로 이미 접수되어 있어요. "내 접수 수정"을 이용해주세요.'});
+      d.rows.push({id:Math.random().toString(36).slice(2,10),name:b.name.trim(),colorName:b.colorName,colorHex:b.colorHex,resolve:b.resolve.trim(),wish:(b.wish||'').trim(),pin:b.pin,created:now(),updated:now(),status:'접수'});
+      save(d); return res({ok:true,count:cnt()});
+    }
+    if(A==='lookup'){ const r=d.rows.find(r=>nm(r.name)===nm(b.name)&&r.pin===b.pin); return res(r?{ok:true,record:pub(r)}:{ok:false,error:'이름 또는 비밀번호가 맞지 않아요.'}); }
+    if(A==='update'||A==='cancel'){
+      const r=d.rows.find(r=>r.id===b.id&&r.pin===b.pin); if(!r) return res({ok:false,error:'비밀번호가 맞지 않아요.'});
+      if(A==='cancel'){ r.status='취소'; r.updated=now(); }
+      else { if(!d.open) return res({ok:false,error:'접수가 마감되어 수정할 수 없어요.'}); Object.assign(r,{name:b.name.trim(),colorName:b.colorName,colorHex:b.colorHex,resolve:b.resolve.trim(),wish:(b.wish||'').trim(),updated:now()}); if(r.status==='취소') r.status='접수'; }
+      save(d); return res({ok:true,count:cnt()});
+    }
+    if(A==='adminLogin') return res(b.password==='demo'?{ok:true,token:'demo-token'}:{ok:false,error:'비밀번호가 맞지 않아요. (데모 비밀번호: demo)'});
+    if(A.startsWith('admin')&&!adm()) return res({ok:false,auth:false,error:'로그인이 만료되었어요.'});
+    if(A==='adminList') return res({ok:true,open:d.open,rows:d.rows.map(r=>({...pub(r),created:r.created,updated:r.updated}))});
+    if(A==='adminSetStatus'){ const r=d.rows.find(r=>r.id===b.id); if(r){r.status=b.status;save(d);} return res({ok:!!r}); }
+    if(A==='adminDelete'){ d.rows=d.rows.filter(r=>r.id!==b.id); save(d); return res({ok:true}); }
+    if(A==='adminSetOpen'){ d.open=!!b.open; save(d); return res({ok:true,open:d.open}); }
+    res({ok:false,error:'알 수 없는 요청'});
+  },250));
+}
+if(!API_URL) $('#demoBar').classList.remove('hide');
+
+/* ════════ 접수 화면 ════════ */
+const COLORS = [
+  ['빨강','#e8433a'],['주황','#ff8a1f'],['노랑','#ffd23f'],['연두','#8bd450'],['초록','#2f9e5b'],
+  ['하늘','#5bbcf0'],['파랑','#3b6fe0'],['남색','#1d2b6e'],['보라','#8a5be0'],['분홍','#ff8fb8'],
+  ['갈색','#8a5a2b'],['검정','#2a2a2e'],['하양','#ffffff'],['회색','#9aa0ad']
+];
+let picked = null;        // {name, hex}
+let editing = null;       // {id, pin}
+
+function renderSwatches(){
+  const box = $('#swatches'); box.innerHTML='';
+  COLORS.forEach(([n,h])=>{
+    const b = document.createElement('button'); b.type='button'; b.className='sw'; b.title=n; b.setAttribute('aria-label',n);
+    b.style.background=h; if(h==='#ffffff') b.style.boxShadow='0 0 0 1px #bbb,0 2px 6px rgba(0,0,0,.2)';
+    b.setAttribute('aria-pressed', picked && picked.name===n ? 'true':'false');
+    b.onclick=()=>{ picked={name:n,hex:h}; renderSwatches(); };
+    box.appendChild(b);
+  });
+  const p = document.createElement('label'); p.className='sw pick'; p.style.margin='0'; p.title='직접 고르기';
+  p.innerHTML='<input type="color" aria-label="색상 직접 고르기" value="'+(picked&&picked.custom?picked.hex:'#ff8a1f')+'">';
+  p.firstChild.oninput=e=>{ picked={name:'직접선택 '+e.target.value.toUpperCase(),hex:e.target.value,custom:true}; renderPicked(); };
+  p.firstChild.onchange=()=>renderSwatches();
+  box.appendChild(p);
+  renderPicked();
+}
+function renderPicked(){
+  $('#picked').innerHTML = picked ? '<span class="dot" style="background:'+esc(picked.hex)+'"></span> 선택한 색: <b>'+esc(picked.name)+'</b>' : '<span class="hint">동그라미를 눌러 골라보세요 (맨 끝 무지개는 직접 선택)</span>';
+}
+
+function setCounter(r){
+  if(!r||!r.ok) { $('#count').textContent='–'; return; }
+  const el=$('#count'), to=r.count, from=Number(el.textContent)||0; let t0;
+  const step=ts=>{ t0=t0||ts; const p=Math.min((ts-t0)/700,1); el.textContent=Math.round(from+(to-from)*p); if(p<1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+  const b=$('#openBadge'); b.textContent=r.open===false?'접수 마감':'접수 중'; b.classList.toggle('closed', r.open===false);
+  window.__open = r.open!==false;
+  $('#submitBtn').disabled = (r.open===false);
+}
+async function refreshStats(){ setCounter(await api('stats')); }
+
+function counter(id,max){ const f=()=>{$('#'+id[0]).textContent=$('#'+id[1]).value.length+'/'+max}; $('#'+id[1]).addEventListener('input',f); f(); }
+counter(['cResolve','resolve'],200); counter(['cWish','wish'],300);
+
+function showMsg(el,type,text){ el.className='msg '+(type||''); el.textContent=text||''; if(!type) el.style.display='none'; else el.style.display='block'; }
+
+function setTab(which){
+  const isNew = which==='new';
+  $('#tabNew').setAttribute('aria-selected',isNew); $('#tabEdit').setAttribute('aria-selected',!isNew);
+  $('#form').classList.toggle('hide', !isNew && !editing);
+  $('#findForm').classList.toggle('hide', isNew || !!editing);
+  $('#done').classList.add('hide');
+  if(isNew && editing) leaveEdit(true);
+}
+$('#tabNew').onclick=()=>{ if(editing) leaveEdit(true); setTab('new'); $('#form').classList.remove('hide'); };
+$('#tabEdit').onclick=()=>setTab('edit');
+
+function enterEdit(rec,pin){
+  editing={id:rec.id,pin};
+  $('#name').value=fix(rec.name); $('#resolve').value=fix(rec.resolve); $('#wish').value=fix(rec.wish);
+  picked={name:fix(rec.colorName),hex:rec.colorHex||'#cccccc',custom:/^직접선택/.test(rec.colorName)};
+  renderSwatches(); $('#resolve').dispatchEvent(new Event('input')); $('#wish').dispatchEvent(new Event('input'));
+  $('#pinBox').classList.add('hide');
+  const bn=$('#editBanner'); bn.style.display='block'; bn.classList.remove('hide');
+  bn.textContent = rec.status==='취소' ? '😢 취소된 접수예요. 저장하면 다시 접수돼요!' : '✍️ 내 접수를 수정하는 중이에요 (현재 상태: '+rec.status+')';
+  $('#submitBtn').textContent='💾 수정 저장하기';
+  $('#cancelBtn').classList.toggle('hide', rec.status==='취소');
+  $('#form').classList.remove('hide'); $('#findForm').classList.add('hide'); $('#done').classList.add('hide');
+}
+function leaveEdit(reset){
+  editing=null; $('#pinBox').classList.remove('hide'); $('#editBanner').style.display='none';
+  $('#submitBtn').textContent='🎉 접수하기'; $('#cancelBtn').classList.add('hide');
+  if(reset){ $('#form').reset(); picked=null; renderSwatches(); $('#resolve').dispatchEvent(new Event('input')); $('#wish').dispatchEvent(new Event('input')); }
+}
+
+$('#form').addEventListener('submit', async e=>{
+  e.preventDefault(); const msg=$('#msg'); showMsg(msg);
+  const data={ name:$('#name').value.trim(), colorName:picked&&picked.name, colorHex:picked&&picked.hex, resolve:$('#resolve').value.trim(), wish:$('#wish').value.trim() };
+  if(!data.name) return showMsg(msg,'err','이름을 입력해주세요 🙂');
+  if(!picked) return showMsg(msg,'err','좋아하는 색상을 골라주세요 🎨');
+  if(!data.resolve) return showMsg(msg,'err','각오를 한 줄만 적어주세요 💪');
+  const btn=$('#submitBtn'); const old=btn.textContent; btn.disabled=true; btn.textContent='저장 중… ⏳';
+  let r;
+  if(editing){ r=await api('update', Object.assign({id:editing.id,pin:editing.pin},data)); }
+  else {
+    const pin=$('#pin').value; if(pin.length<4){ btn.disabled=false; btn.textContent=old; return showMsg(msg,'err','수정용 비밀번호를 4자 이상 정해주세요 🔑'); }
+    r=await api('submit', Object.assign({pin},data)); data.pin=pin;
+  }
+  btn.disabled=false; btn.textContent=old;
+  if(!r.ok) return showMsg(msg,'err',r.error||'저장하지 못했어요.');
+  const wasEdit=!!editing;
+  $('#form').classList.add('hide'); $('#done').classList.remove('hide');
+  $('#doneEmoji').textContent = wasEdit?'✨':'🎉';
+  $('#doneTitle').textContent = wasEdit?'수정 완료!':'접수 완료!';
+  $('#doneText').textContent = (data.name)+'님, 눈밭에서 만나요 ⛄';
+  $('#keyBox').innerHTML = wasEdit ? '내용이 저장됐어요. 언제든 <b>"내 접수 수정"</b>에서 다시 고칠 수 있어요.' :
+    '나중에 고치려면 <b>"내 접수 수정"</b> 탭에서<br>이름 <b>'+esc(data.name)+'</b> + 방금 정한 비밀번호를 입력하세요.<br>📸 이 화면을 캡처해두면 좋아요!';
+  leaveEdit(true); refreshStats();
+});
+
+$('#cancelBtn').onclick=async()=>{
+  if(!editing) return;
+  if(!confirm('정말 접수를 취소할까요? (나중에 다시 접수할 수 있어요)')) return;
+  const r=await api('cancel',{id:editing.id,pin:editing.pin});
+  if(!r.ok) return showMsg($('#msg'),'err',r.error||'취소하지 못했어요.');
+  leaveEdit(true); $('#form').classList.add('hide'); $('#done').classList.remove('hide');
+  $('#doneEmoji').textContent='👋'; $('#doneTitle').textContent='접수가 취소됐어요'; $('#doneText').textContent='마음이 바뀌면 언제든 다시 접수해주세요!'; $('#keyBox').style.display='none';
+  refreshStats();
+};
+$('#againBtn').onclick=()=>{ $('#keyBox').style.display=''; $('#done').classList.add('hide'); $('#form').classList.remove('hide'); setTab('new'); $('#form').classList.remove('hide'); window.scrollTo({top:0,behavior:'smooth'}); };
+
+$('#findForm').addEventListener('submit', async e=>{
+  e.preventDefault(); const m=$('#fMsg'); showMsg(m);
+  const name=$('#fName').value.trim(), pin=$('#fPin').value;
+  if(!name||!pin) return showMsg(m,'err','이름과 비밀번호를 모두 입력해주세요.');
+  const b=$('#findBtn'); b.disabled=true; b.textContent='찾는 중… 🔎';
+  const r=await api('lookup',{name,pin}); b.disabled=false; b.textContent='🔍 내 접수 불러오기';
+  if(!r.ok) return showMsg(m,'err',r.error||'찾지 못했어요.');
+  $('#fPin').value=''; enterEdit(r.record,pin);
+});
+
+$('#posterBtn').onclick=()=>{const im=$('#lb img');if(!im.src)im.src=im.dataset.src;$('#lb').classList.add('on');};
+$('#lb').onclick=()=>$('#lb').classList.remove('on');
+
+/* ════════ 관리자 ════════ */
+let token = store.get('hb_admin') || null, adminRows=[], adminOpen=true;
+const STAT = {접수:'접수',확정:'확정',취소:'취소'};
+
+function showAdmin(on){
+  $('#adminView').classList.toggle('hide',!on); $('#pubView').classList.toggle('hide',on); $('#pubFooter').classList.toggle('hide',on);
+  document.body.classList.toggle('isadmin',on);
+  if(on){ if(token) loadAdmin(); else { $('#loginBox').classList.remove('hide'); $('#dash').classList.add('hide'); } }
+  window.scrollTo(0,0);
+}
+$('#adminLink').onclick=()=>{ location.hash='admin'; };
+$('#backBtn').onclick=()=>{ location.hash=''; };
+function route(){ showAdmin(location.hash==='#admin'); }
+window.addEventListener('hashchange',route);
+
+$('#loginForm').addEventListener('submit', async e=>{
+  e.preventDefault(); const m=$('#lMsg'); showMsg(m);
+  const pw=$('#apw').value; if(!pw) return showMsg(m,'err','비밀번호를 입력해주세요.');
+  const b=$('#loginBtn'); b.disabled=true; b.textContent='확인 중…';
+  const r=await api('adminLogin',{password:pw}); b.disabled=false; b.textContent='로그인';
+  if(!r.ok) return showMsg(m,'err',r.error||'로그인하지 못했어요.');
+  token=r.token; store.set('hb_admin',token); $('#apw').value=''; loadAdmin();
+});
+$('#logoutBtn').onclick=()=>{ token=null; store.del('hb_admin'); $('#dash').classList.add('hide'); $('#loginBox').classList.remove('hide'); };
+
+async function loadAdmin(){
+  const r=await api('adminList',{token});
+  if(!r.ok){ if(r.auth===false){ token=null; store.del('hb_admin'); } $('#dash').classList.add('hide'); $('#loginBox').classList.remove('hide'); showMsg($('#lMsg'),'err',r.error||'불러오지 못했어요.'); return; }
+  adminRows=r.rows||[]; adminOpen=r.open!==false;
+  $('#loginBox').classList.add('hide'); $('#dash').classList.remove('hide');
+  renderAdmin();
+}
+$('#reloadBtn').onclick=loadAdmin;
+$('#openBtn').onclick=async()=>{
+  const want=!adminOpen; if(!confirm(want?'접수를 다시 열까요?':'접수를 마감할까요? (신규 접수·수정이 막혀요)')) return;
+  const r=await api('adminSetOpen',{token,open:want}); if(r.ok){ adminOpen=r.open; renderAdmin(); } else alert(r.error||'변경하지 못했어요.');
+};
+
+function renderAdmin(){
+  const act=adminRows.filter(r=>r.status!=='취소'), ok=adminRows.filter(r=>r.status==='확정'), wait=adminRows.filter(r=>r.status==='접수'), cx=adminRows.filter(r=>r.status==='취소');
+  $('#stats').innerHTML =
+    '<div class="stat"><div class="n">'+act.length+'</div><div class="l">현재 접수 인원</div></div>'+
+    '<div class="stat ok"><div class="n">'+ok.length+'</div><div class="l">확정</div></div>'+
+    '<div class="stat"><div class="n">'+wait.length+'</div><div class="l">확정 대기</div></div>'+
+    '<div class="stat cx"><div class="n">'+cx.length+'</div><div class="l">취소</div></div>'+
+    '<div class="stat"><div class="n" style="font-size:22px;padding-top:8px">'+(adminOpen?'🟢 접수중':'🔴 마감')+'</div><div class="l">접수 상태</div></div>';
+  $('#openBtn').textContent = adminOpen?'접수 마감하기':'접수 다시 열기';
+  renderTable(); renderFinal();
+}
+function renderTable(){
+  const q=$('#q').value.trim().toLowerCase();
+  const rows=adminRows.map((r,i)=>({r,i})).filter(({r})=>!q||[r.name,r.resolve,r.wish,r.colorName].join(' ').toLowerCase().includes(q));
+  $('#tbody').innerHTML = rows.length ? rows.map(({r,i})=>
+    '<tr class="'+(r.status==='취소'?'cx':'')+'"><td>'+(i+1)+'</td><td><b>'+esc(fix(r.name))+'</b></td>'+
+    '<td><span class="dot" style="background:'+esc(/^#[0-9a-f]{6}$/i.test(r.colorHex)?r.colorHex:'#ccc')+'"></span> '+esc(fix(r.colorName))+'</td>'+
+    '<td class="txt">'+esc(fix(r.resolve))+'</td><td class="txt">'+esc(fix(r.wish))+'</td>'+
+    '<td>'+esc((r.created||'').slice(5,16))+'</td><td>'+esc(r.updated&&r.updated!==r.created?(r.updated||'').slice(5,16):'-')+'</td>'+
+    '<td><select class="st" data-id="'+esc(r.id)+'">'+['접수','확정','취소'].map(s=>'<option'+(s===r.status?' selected':'')+'>'+s+'</option>').join('')+'</select></td>'+
+    '<td><button class="x" data-del="'+esc(r.id)+'" title="삭제">🗑</button></td></tr>').join('')
+    : '<tr><td colspan="9" style="text-align:center;padding:30px;color:var(--mute)">아직 접수된 기록이 없어요 ❄</td></tr>';
+}
+$('#q').addEventListener('input',renderTable);
+$('#tbody').addEventListener('change',async e=>{
+  if(!e.target.classList.contains('st')) return;
+  const r=await api('adminSetStatus',{token,id:e.target.dataset.id,status:e.target.value});
+  if(!r.ok) alert(r.error||'변경하지 못했어요.'); loadAdmin();
+});
+$('#tbody').addEventListener('click',async e=>{
+  const id=e.target.dataset.del; if(!id) return;
+  const row=adminRows.find(r=>r.id===id); if(!confirm('"'+fix(row&&row.name)+'" 기록을 완전히 삭제할까요? 되돌릴 수 없어요.')) return;
+  const r=await api('adminDelete',{token,id}); if(!r.ok) alert(r.error||'삭제하지 못했어요.'); loadAdmin();
+});
+function renderFinal(){
+  const ok=adminRows.filter(r=>r.status==='확정');
+  $('#finalN').textContent='('+ok.length+'명)';
+  $('#finalList').innerHTML = ok.length ? ok.map((r,i)=>'<li>'+(i+1)+'. <b>'+esc(fix(r.name))+'</b> <span class="dot" style="background:'+esc(/^#[0-9a-f]{6}$/i.test(r.colorHex)?r.colorHex:'#ccc')+'"></span></li>').join('') : '<li style="color:var(--mute)">아직 확정된 인원이 없어요. 전체 기록에서 상태를 "확정"으로 바꿔주세요.</li>';
+  const m={}; adminRows.filter(r=>r.status!=='취소').forEach(r=>{ const k=fix(r.colorName).replace(/^직접선택.*/,'직접선택'); (m[k]=m[k]||{n:0,h:r.colorHex}).n++; });
+  const arr=Object.entries(m).sort((a,b)=>b[1].n-a[1].n), max=arr.length?arr[0][1].n:1;
+  $('#bars').innerHTML = arr.length ? arr.map(([k,v])=>'<div class="bar"><span style="width:64px">'+esc(k)+'</span><span class="b" style="width:'+Math.max(6,v.n/max*60)+'%;background:'+esc(/^#[0-9a-f]{6}$/i.test(v.h)?v.h:'#ccc')+'"></span><b>'+v.n+'</b></div>').join('') : '<span class="hint">데이터가 없어요.</span>';
+}
+$('#aTabAll').onclick=()=>{ $('#aTabAll').setAttribute('aria-selected',true); $('#aTabFinal').setAttribute('aria-selected',false); $('#allPane').classList.remove('hide'); $('#finalPane').classList.add('hide'); };
+$('#aTabFinal').onclick=()=>{ $('#aTabAll').setAttribute('aria-selected',false); $('#aTabFinal').setAttribute('aria-selected',true); $('#allPane').classList.add('hide'); $('#finalPane').classList.remove('hide'); };
+
+function csv(rows,name){
+  const cell=v=>{ let s=fix(v); if(/^[=+\-@]/.test(s)) s="'"+s; return '"'+s.replace(/"/g,'""')+'"'; };
+  const head=['번호','이름','좋아하는색상','각오','바라는점','접수일시','수정일시','상태'];
+  const lines=[head.map(cell).join(',')].concat(rows.map((r,i)=>[i+1,r.name,r.colorName,r.resolve,r.wish,r.created,r.updated,r.status].map(cell).join(',')));
+  const blob=new Blob(['﻿'+lines.join('\r\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+}
+$('#csvBtn').onclick=()=>csv(adminRows,'한백건축배_연말파티_접수전체.csv');
+$('#csvFinalBtn').onclick=()=>csv(adminRows.filter(r=>r.status==='확정'),'한백건축배_연말파티_확정명단.csv');
+
+/* 시작 */
+renderSwatches(); refreshStats(); route();
+</script>
+</body>
+</html>
