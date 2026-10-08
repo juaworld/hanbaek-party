@@ -3,7 +3,7 @@
  *
  * 설치: 접수 데이터를 담을 구글시트를 새로 만든 뒤
  *   확장 프로그램 > Apps Script 에 이 코드를 통째로 붙여넣기
- *   → 아래 ADMIN_PASSWORD, SALT 를 바꾸고 저장
+ *   → 아래 ADMIN_ID, ADMIN_PASSWORD, SALT 를 바꾸고 저장
  *   → 배포 > 새 배포 > 유형 "웹 앱" > 실행: 나 / 액세스: 모든 사용자 > 배포
  *   → 나오는 "웹 앱 URL"을 index.html 맨 위 API_URL 에 넣기
  *
@@ -14,6 +14,7 @@
  *  - 비밀번호 5회 연속 오류 시 10분 잠금
  */
 
+const ADMIN_ID = '여기에-관리자-아이디';              // ← 반드시 변경
 const ADMIN_PASSWORD = '여기에-관리자-비밀번호를-적으세요'; // ← 반드시 변경
 const SALT = '아무-긴-문자열로-바꾸세요-예-snow-2026';     // ← 반드시 변경 (변경 후엔 기존 접수자 비번이 무효화되니 오픈 전에만)
 const SHEET_NAME = '접수';
@@ -120,9 +121,9 @@ function adminLogin_(req) {
   const cache = CacheService.getScriptCache();
   const fails = Number(cache.get('admin_fail') || 0);
   if (fails >= 5) return { ok: false, error: '로그인 시도가 너무 많아요. 10분 뒤에 다시 시도해주세요.' };
-  if (!req.password || String(req.password) !== ADMIN_PASSWORD) {
+  if (!req.password || String(req.id || '').trim() !== ADMIN_ID || String(req.password) !== ADMIN_PASSWORD) {
     cache.put('admin_fail', String(fails + 1), 600);
-    return { ok: false, error: '비밀번호가 맞지 않아요.' };
+    return { ok: false, error: '아이디 또는 비밀번호가 맞지 않아요.' };
   }
   cache.remove('admin_fail');
   const token = Utilities.getUuid() + Utilities.getUuid();

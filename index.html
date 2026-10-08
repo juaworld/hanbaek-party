@@ -240,6 +240,8 @@ body{padding-bottom:34px}
       <h2 style="margin:0 0 4px;font-size:26px">🔐 관리자 로그인</h2>
       <p class="hint" style="margin:0">접수 기록 전체는 관리자만 볼 수 있어요.</p>
       <form id="loginForm" autocomplete="off">
+        <label for="aid">관리자 아이디</label>
+        <input type="text" id="aid" autocomplete="username" autocapitalize="off" spellcheck="false">
         <label for="apw">관리자 비밀번호</label>
         <input type="password" id="apw" autocomplete="current-password">
         <div class="msg" id="lMsg" role="alert"></div>
@@ -300,7 +302,7 @@ body{padding-bottom:34px}
 /* ════════ 설정 ════════
    Apps Script 웹 앱 배포 후 나오는 URL(.../exec)을 아래에 붙여넣으세요.
    비워두면 미리보기(데모) 모드로 동작합니다. */
-const API_URL = '';
+const API_URL = 'https://script.google.com/macros/s/AKfycbw5B_0O168-Nz5oKLvEnyUTTBskP86BBmRFa9mC1g9UXKFXa5d303eIMHSzDffKTkPq/exec';
 
 /* ════════ 유틸 ════════ */
 const $ = s => document.querySelector(s);
@@ -360,7 +362,7 @@ function demoApi(b){
       else { if(!d.open) return res({ok:false,error:'접수가 마감되어 수정할 수 없어요.'}); Object.assign(r,{name:b.name.trim(),colorName:b.colorName,colorHex:b.colorHex,resolve:b.resolve.trim(),wish:(b.wish||'').trim(),updated:now()}); if(r.status==='취소') r.status='접수'; }
       save(d); return res({ok:true,count:cnt()});
     }
-    if(A==='adminLogin') return res(b.password==='demo'?{ok:true,token:'demo-token'}:{ok:false,error:'비밀번호가 맞지 않아요. (데모 비밀번호: demo)'});
+    if(A==='adminLogin') return res(b.id==='hbokey'&&b.password==='demo'?{ok:true,token:'demo-token'}:{ok:false,error:'아이디 또는 비밀번호가 맞지 않아요. (데모: hbokey / demo)'});
     if(A.startsWith('admin')&&!adm()) return res({ok:false,auth:false,error:'로그인이 만료되었어요.'});
     if(A==='adminList') return res({ok:true,open:d.open,rows:d.rows.map(r=>({...pub(r),created:r.created,updated:r.updated}))});
     if(A==='adminSetStatus'){ const r=d.rows.find(r=>r.id===b.id); if(r){r.status=b.status;save(d);} return res({ok:!!r}); }
@@ -511,9 +513,9 @@ window.addEventListener('hashchange',route);
 
 $('#loginForm').addEventListener('submit', async e=>{
   e.preventDefault(); const m=$('#lMsg'); showMsg(m);
-  const pw=$('#apw').value; if(!pw) return showMsg(m,'err','비밀번호를 입력해주세요.');
+  const aid=$('#aid').value.trim(), pw=$('#apw').value; if(!aid||!pw) return showMsg(m,'err','아이디와 비밀번호를 입력해주세요.');
   const b=$('#loginBtn'); b.disabled=true; b.textContent='확인 중…';
-  const r=await api('adminLogin',{password:pw}); b.disabled=false; b.textContent='로그인';
+  const r=await api('adminLogin',{id:aid,password:pw}); b.disabled=false; b.textContent='로그인';
   if(!r.ok) return showMsg(m,'err',r.error||'로그인하지 못했어요.');
   token=r.token; store.set('hb_admin',token); $('#apw').value=''; loadAdmin();
 });
