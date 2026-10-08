@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex">
 <meta property="og:title" content="한백건축배 연말파티 · VVIP 초대장">
 <meta property="og:description" content="1박 2일 눈싸움 힐링 캠프, 참가 접수 중!">
-<meta property="og:image" content="image.png">
+<meta property="og:image" content="poster.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
@@ -136,6 +136,8 @@ select.st{border:2px solid var(--line);border-radius:10px;padding:5px 6px;backgr
 .final-list li{break-inside:avoid;padding:6px 0;border-bottom:1px dashed var(--line)}
 @media(max-width:560px){.final-list{columns:1}.title{font-size:34px}.title .t2{font-size:40px}}
 .hide{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.poster{display:block;width:100%;height:auto;border-radius:24px;border:4px solid #fff;box-shadow:var(--shadow)}
 .demo{position:fixed;left:0;right:0;bottom:0;background:#ffefc9;color:#7a4b00;font-size:12.5px;text-align:center;padding:6px;z-index:40}
 .mt{margin-top:14px}
 body{padding-bottom:34px}
@@ -148,13 +150,8 @@ body{padding-bottom:34px}
 <!-- ============ 일반 접수 화면 ============ -->
 <div class="wrap" id="pubView">
   <header class="hero">
-    <span class="snowman">⛄</span>
-    <h1 class="title"><span class="t1">한백건축배</span><span class="t2">연말파티</span></h1>
-    <div class="sign">❄ 1박 2일 눈싸움 힐링 캠프 ❄</div>
-    <div class="chips">
-      <span class="chip">📅 2026년 연말</span><span class="chip">📍 강원도</span>
-      <span class="chip">⛷ 눈싸움</span><span class="chip">🛷 썰매</span><span class="chip">🔥 불멍</span>
-    </div>
+    <h1 class="sr">한백건축배 연말파티 · 1박 2일 눈싸움 힐링 캠프</h1>
+    <img class="poster" src="poster.jpg" alt="한백건축배 연말파티 VVIP 초대장 포스터 — 1박 2일 눈싸움 힐링 캠프, 2026년 연말 강원도" width="1024" height="1536">
   </header>
 
   <section class="counter" aria-live="polite">
@@ -167,7 +164,6 @@ body{padding-bottom:34px}
     <div class="row">💌 <div><b>VVIP 초대장</b> — 눈싸움 · 썰매 · 불멍</div></div>
     <div class="row">👥 <div><b>초대 대상</b> 30대 이하 한백 임직원 · 직속 가족 · 1년 이내 퇴사자</div></div>
     <div class="row">🎁 <div>간식 · 상품 · 회식비 <b>찬조는 언제나 대환영!</b> (불참은 자유, 찬조는 센스)</div></div>
-    <button class="btn-poster" id="posterBtn" type="button">🖼 초대장 포스터 보기</button>
   </section>
 
   <section class="card">
@@ -295,7 +291,6 @@ body{padding-bottom:34px}
   </div>
 </div>
 
-<div class="lb" id="lb"><img data-src="image.png" alt="한백건축배 연말파티 초대장 포스터"></div>
 <div class="demo hide" id="demoBar">⚠ 미리보기(데모) 모드예요 — 데이터가 이 브라우저에만 저장돼요. API_URL을 설정하면 실제로 동작해요.</div>
 
 <script>
@@ -493,8 +488,6 @@ $('#findForm').addEventListener('submit', async e=>{
   $('#fPin').value=''; enterEdit(r.record,pin);
 });
 
-$('#posterBtn').onclick=()=>{const im=$('#lb img');if(!im.src)im.src=im.dataset.src;$('#lb').classList.add('on');};
-$('#lb').onclick=()=>$('#lb').classList.remove('on');
 
 /* ════════ 관리자 ════════ */
 let token = store.get('hb_admin') || null, adminRows=[], adminOpen=true;
