@@ -137,6 +137,7 @@ select.st{border:2px solid var(--line);border-radius:10px;padding:5px 6px;backgr
 @media(max-width:560px){.final-list{columns:1}.title{font-size:34px}.title .t2{font-size:40px}}
 .hide{display:none!important}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.posterbox{margin-top:16px}
 .poster{display:block;width:100%;height:auto;border-radius:24px;border:4px solid #fff;box-shadow:var(--shadow)}
 .demo{position:fixed;left:0;right:0;bottom:0;background:#ffefc9;color:#7a4b00;font-size:12.5px;text-align:center;padding:6px;z-index:40}
 .mt{margin-top:14px}
@@ -150,14 +151,23 @@ body{padding-bottom:34px}
 <!-- ============ 일반 접수 화면 ============ -->
 <div class="wrap" id="pubView">
   <header class="hero">
-    <h1 class="sr">한백건축배 연말파티 · 1박 2일 눈싸움 힐링 캠프</h1>
-    <img class="poster" src="poster.jpg" alt="한백건축배 연말파티 VVIP 초대장 포스터 — 1박 2일 눈싸움 힐링 캠프, 2026년 연말 강원도" width="1024" height="1536">
+    <span class="snowman">⛄</span>
+    <h1 class="title"><span class="t1">한백건축배</span><span class="t2">연말파티</span></h1>
+    <div class="sign">❄ 1박 2일 눈싸움 힐링 캠프 ❄</div>
+    <div class="chips">
+      <span class="chip">📅 2026년 연말</span><span class="chip">📍 강원도</span>
+      <span class="chip">⛷ 눈싸움</span><span class="chip">🛷 썰매</span><span class="chip">🔥 불멍</span>
+    </div>
   </header>
 
   <section class="counter" aria-live="polite">
     <div class="lbl">지금까지 함께하기로 한 사람</div>
     <div class="num"><span id="count">–</span><small>명</small></div>
     <span class="badge" id="openBadge">접수 중</span>
+  </section>
+
+  <section class="posterbox">
+    <img class="poster" src="poster.jpg" alt="한백건축배 연말파티 VVIP 초대장 포스터 — 1박 2일 눈싸움 힐링 캠프, 2026년 연말 강원도" width="1024" height="1536">
   </section>
 
   <section class="card invite">
